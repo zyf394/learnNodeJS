@@ -43,12 +43,11 @@ var server = http.createServer(function(req,res){
    var filePath =  false;
     if(req.url == "/"){
         filePath = 'public/index.html';
-    }else {
+    }else{
         filePath = 'public' + req.url;
     }
     var absPath = "./" + filePath;
-    console.log(filePath);
-    console.log(absPath);
+
     serverStatic(res,cache,absPath)
 });
 
